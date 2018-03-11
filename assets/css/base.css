@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Affect';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/Affect-Bold.woff') format('woff');
+}
+
 * {
     font-family: sans-serif;
     z-index: 1;
@@ -35,8 +42,10 @@ header {
     z-index: 2;
 }
 
-.menu-section {
-
+.menu-section *{
+    font-family: Affect, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .menu-section .menu-button, .menu-section .menu-close-button {
@@ -72,7 +81,7 @@ header {
 
 .menu-section nav a {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-decoration: none;
 }
 
