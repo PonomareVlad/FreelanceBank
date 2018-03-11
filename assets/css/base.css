@@ -25,6 +25,85 @@ main {
     position: relative;
 }
 
+header {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-section {
+
+}
+
+.menu-section .menu-button, .menu-section .menu-close-button {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("/assets/img/menu.svg");
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+}
+
+.menu-section .menu-close-button {
+    display: none;
+    background-image: url("/assets/img/close.svg");
+}
+
+.menu-section nav {
+    display: none;
+    margin: auto;
+    width: auto;
+    max-width: 70vw;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-section nav * {
+    margin: 2rem 0;
+}
+
+.menu-section nav a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.menu-section:target {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: black;
+}
+
+.menu-section:target .menu-button, .menu-section:target .menu-close-button {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.menu-section:target .menu-close-button {
+    display: block;
+}
+
+.menu-section:target nav {
+    display: flex;
+}
+
 /* Landing classes */
 
 main > * {
@@ -121,7 +200,7 @@ footer {
     object-fit: cover;
 }
 
-.radial-mask{
+.radial-mask {
     /*position: relative;*/
 }
 
@@ -137,4 +216,19 @@ footer {
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#cc000000', GradientType=1);*/
     z-index: 2;
+}
+
+button, .button {
+    display: inline-block;
+    padding: .5rem;
+    min-width: 200px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    background: rgba(100, 100, 100, 0.6);
+    -webkit-backdrop-filter: blur(25px);
+    cursor: pointer;
 }
